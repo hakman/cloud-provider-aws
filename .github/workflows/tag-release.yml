@@ -33,7 +33,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ needs.tag_release.outputs.release_tag }}
+        tag_name: ${{ needs.tag.outputs.release_tag }}
         release_name: ${{ needs.tag.outputs.release_tag }}
         body: |
           AWS Cloud Provider
