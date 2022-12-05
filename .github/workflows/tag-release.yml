@@ -21,6 +21,7 @@ jobs:
       - run: /usr/bin/git config --global user.name 'GitHub Actions Release Tagger'
       - run: hack/tag-release.sh
         id: tag_release
+      - run: echo "${{ steps.tag_release.outputs.release_tag }}"
     outputs:
       tag_release: ${{ steps.tag_release.outputs.release_tag }}
 
