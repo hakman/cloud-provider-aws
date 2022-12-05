@@ -22,7 +22,7 @@ jobs:
       - run: hack/tag-release.sh
 
   release:
-    needs: tag-release
+    needs: tag
     runs-on: ubuntu-latest
     steps:
     - name: Create Release
