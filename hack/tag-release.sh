@@ -29,4 +29,4 @@ fi
 git tag -a -m "Release ${VERSION}" "v${VERSION}"
 git push origin "v${VERSION}"
 
-echo "release_tag=refs/tags/v${VERSION}" >> $GITHUB_ENV
+echo "release_tag=refs/tags/v${VERSION}" >> GITHUB_OUTPUT
