@@ -23,7 +23,7 @@ fi
 
 if [ "$(git tag -l "v${VERSION}")" ]; then
   echo "Tag v${VERSION} already exists"
-  exit 0
+  exit 1
 fi
 
 git tag -a -m "Release ${VERSION}" "v${VERSION}"
