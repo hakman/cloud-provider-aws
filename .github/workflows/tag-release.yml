@@ -29,14 +29,12 @@ jobs:
     needs: tag
     runs-on: ubuntu-latest
     steps:
-    - name: Create Release
-      id: create-release
-      uses: actions/create-release@v1
+    - uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ${{ needs.tag_release.outputs.release_tag }}
-        release_name: ${{ needs.tag_release.outputs.release_tag }}
+        release_name: ${{ needs.tag.outputs.release_tag }}
         body: |
           AWS Cloud Provider
           
