@@ -28,3 +28,5 @@ fi
 
 git tag -a -m "Release ${VERSION}" "v${VERSION}"
 git push origin "v${VERSION}"
+
+echo "release_tag=v${VERSION}"
