@@ -31,8 +31,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: refs/tags/${{ env.release_tag }}
-        release_name: refs/tags/${{ env.release_tag }}
+        tag_name: ${{ env.release_tag }}
+        release_name: ${{ env.release_tag }}
         body: |
           AWS Cloud Provider
           
