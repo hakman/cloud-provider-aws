@@ -23,7 +23,7 @@ jobs:
         id: tag_release
       - run: echo "${{ steps.tag_release.outputs.release_tag }}"
     outputs:
-      tag_release: ${{ steps.tag_release.outputs.release_tag }}
+      release_tag: ${{ steps.tag_release.outputs.release_tag }}
 
   release:
     needs: tag
