@@ -10,7 +10,6 @@ on:
 
 jobs:
   tag:
-#    if: ${{ github.repository == 'kubernetes/cloud-provider-aws' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
